@@ -461,6 +461,7 @@ export class ProsemirrorBinding {
           this.type,
           new Y.Snapshot(prevSnapshot.ds, snapshot.sv)
         ).map((t) => {
+          console.log('this is from render snapshot', t)
           if (
             !t._item.deleted || isVisible(t._item, snapshot) ||
             isVisible(t._item, prevSnapshot)
